@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oi bobinhakkk</title>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        #conteudo {
+            background: #f50288;
+            width: 1000px;
+            padding: 500px;
+            text-align: center;
+            font-family: sans-serif;
+            border-radius: 10px;
+        }
+
+        .btn {
+            background: black;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 80px;
+            border-radius: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="conteudo">
+        <h2>Oi amor, queria saber se você realmente me ama?</h2>
+        <button class="btn" onclick="sim()">SIM<3</button>
+        <button class="btn" ontouchstart="desvia(this)" onmouseover="desvia(this)">NÃO>:(</button>
+    </div>
+    <script>
+        function sim() {
+            alert("Eu também te amo muito minha macaquinha <3 :)");
+            location.href = "https://youtu.be/k9wCCJUKm08?si=U7A62NUxtqVZqATE";
+        }
+
+        function desvia(btn) {
+            btn.style.position = 'absolute';
+            btn.style.bottom = geraPosicao(10, 90);
+            btn.style.left = geraPosicao(10, 90);
+            console.log('opa, desviei...');
+        }
+
+        function geraPosicao(min, max) {
+            return (Math.random() * (max - min) + min) + "%";
+        }
+    </script>
+</body>
+</html>
